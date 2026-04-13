@@ -1,6 +1,6 @@
-export const errorMiddleware = async(req,res,next,err) =>{
+export const errorMiddleware = (err, req, res, next) => {
     res.status(err.status || 500).json({
-        success : false,
-        message:err.message || "something went wrong"
-    })
-}
+        success: false,
+        message: err.message || "Something went wrong"
+    });
+};
